@@ -24,9 +24,9 @@ for YEAR in $YEARS; do
 
 		echo $YEAR-$MONTH
 		# perform snapshot
-		#osmium time-filter --progress $HISTORYFILE $YEAR-$MONTH-01T00:00:00Z -o $SNAPSHOTDIR/$YEAR-$MONTH.pbf
+		osmium time-filter --progress $HISTORYFILE $YEAR-$MONTH-01T00:00:00Z -o $SNAPSHOTDIR/$YEAR-$MONTH.pbf
 		# prefilter
-		#osmium-filter-simple -v -w -e "$FILTEREXPR" -o $SNAPSHOTDIR/$YEAR-$MONTH-railway.pbf $SNAPSHOTDIR/$YEAR-$MONTH.pbf
-		#rm $SNAPSHOTDIR/$YEAR-$MONTH.pbf
+		osmium-filter-simple -v -w -e "$FILTEREXPR" -o $SNAPSHOTDIR/$YEAR-$MONTH-railway.pbf $SNAPSHOTDIR/$YEAR-$MONTH.pbf
+		rm $SNAPSHOTDIR/$YEAR-$MONTH.pbf
 	done
 done
